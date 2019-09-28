@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { uiMessages } from '../../constants/ui-messages';
 import { Music } from '../../models/music';
 import { UserService } from '../../services/user.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'page-music',
@@ -12,13 +12,13 @@ export class MusicPage {
 
   userMusicData: Music[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public uiMessages: uiMessages,
+  constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,
     public userService: UserService) {
   }
 
   private pageName = "";
-  private welcomeText = this.uiMessages.musicPageMessages.welcomeText;
-  private subtitle = this.uiMessages.musicPageMessages.subtitle;
+  private welcomeText = this.languageService.getUI().musicPageMessages.welcomeText;
+  private subtitle = this.languageService.getUI().musicPageMessages.subtitle;
   private category: string;
 
   /**

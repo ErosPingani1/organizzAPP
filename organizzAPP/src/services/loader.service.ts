@@ -1,12 +1,12 @@
 import { Injectable } from "@angular/core";
 import { LoadingController } from "ionic-angular";
-import { uiMessages } from "../constants/ui-messages";
+import { LanguageService } from "./language.service";
 
 @Injectable()
 
 export class LoaderService {
 
-    constructor(public loadingCtrl: LoadingController, public uiMessages: uiMessages) {
+    constructor(public loadingCtrl: LoadingController, public languageService: LanguageService) {
 
     }
 
@@ -18,7 +18,7 @@ export class LoaderService {
      */
     presentLoading() {
         let loaderSpinner = 'dots';
-        let contentArray = this.uiMessages.homePageMessages.loaderMessages;
+        let contentArray = this.languageService.getUI().appLoaderMessages.loaderMessages;
         let loaderContent = contentArray[Math.floor(Math.random() * contentArray.length)];
         this.loading = this.loadingCtrl.create({
             spinner: loaderSpinner,

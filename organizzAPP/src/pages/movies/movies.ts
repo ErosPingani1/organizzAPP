@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { uiMessages } from '../../constants/ui-messages';
 import { UserService } from '../../services/user.service';
 import { Movie } from '../../models/movie';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'page-movies',
@@ -12,13 +12,13 @@ export class MoviesPage {
 
   userMoviesData: Movie[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public uiMessages: uiMessages,
+  constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,
     public userService: UserService) {
   }
 
-  private pageName = this.uiMessages.moviesPageMessages.pageName;
-  private welcomeText = this.uiMessages.moviesPageMessages.welcomeText;
-  private subtitle = this.uiMessages.moviesPageMessages.subtitle;
+  private pageName = this.languageService.getUI().moviesPageMessages.pageName;
+  private welcomeText = this.languageService.getUI().moviesPageMessages.welcomeText;
+  private subtitle = this.languageService.getUI().moviesPageMessages.subtitle;
   private category: string;
 
   /**

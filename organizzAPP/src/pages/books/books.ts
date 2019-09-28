@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { uiMessages } from '../../constants/ui-messages';
 import { Book } from '../../models/book';
 import { UserService } from '../../services/user.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'page-books',
@@ -12,14 +12,14 @@ export class BooksPage {
 
   userBooksData: Book[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public uiMessages: uiMessages,
+  constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,
     public userService: UserService) {
   }
 
   private pageName = "";
-  private welcomeText = this.uiMessages.booksPageMessages.welcomeText;
-  private subtitle = this.uiMessages.booksPageMessages.subtitle;
-  private noBooksText = this.uiMessages.booksPageMessages.noBooksMessage;
+  private welcomeText = this.languageService.getUI().booksPageMessages.welcomeText;
+  private subtitle = this.languageService.getUI().booksPageMessages.subtitle;
+  private noBooksText = this.languageService.getUI().booksPageMessages.noBooksMessage;
   private category: string;
 
   /**

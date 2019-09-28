@@ -5,7 +5,7 @@ import { BooksPage } from '../books/books';
 import { MusicPage } from '../music/music';
 import { MoviesPage } from '../movies/movies';
 import { OtherPage } from '../other/other';
-import { uiMessages } from '../../constants/ui-messages';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   templateUrl: 'tabs.html'
@@ -18,7 +18,7 @@ export class TabsPage {
   moviesPage = MoviesPage;
   otherPage = OtherPage;
 
-  constructor(public uiMessages: uiMessages) {
+  constructor(public languageService: LanguageService) {
 
   }
 
@@ -37,19 +37,19 @@ export class TabsPage {
     this.clearAllPageNames();
     switch(page) {
       case 'home':
-        this.homePageName = this.uiMessages.homePageMessages.pageName;
+        this.homePageName = this.languageService.getUI().homePageMessages.pageName;
         break;
       case 'books':
-        this.booksPageName = this.uiMessages.booksPageMessages.pageName;
+        this.booksPageName = this.languageService.getUI().booksPageMessages.pageName;
         break;
       case 'music':
-        this.musicPageName = this.uiMessages.musicPageMessages.pageName;
+        this.musicPageName = this.languageService.getUI().musicPageMessages.pageName;
         break;
       case 'movies':
-        this.moviesPageName = this.uiMessages.moviesPageMessages.pageName;
+        this.moviesPageName = this.languageService.getUI().moviesPageMessages.pageName;
         break;
       case 'other':
-        this.otherPageName = this.uiMessages.otherPageMessages.pageName;
+        this.otherPageName = this.languageService.getUI().otherPageMessages.pageName;
         break;
     }
   }
