@@ -28,6 +28,11 @@ export class TabsPage {
   moviesPageName = " ";
   otherPageName = " ";
 
+  /**
+   * Method called when a new tab is clicked, depending on the selected page value only the value for that specific page is set in order to clear
+   * all the other names and leave the tabsBar elements without names under the icon
+   * @param page 
+   */
   setPageName(page: string) {
     this.clearAllPageNames();
     switch(page) {
@@ -49,6 +54,9 @@ export class TabsPage {
     }
   }
 
+  /**
+   * Method used to clear all the tabs titles 
+   */
   clearAllPageNames() {
     this.homePageName = " ";
     this.booksPageName = " ";

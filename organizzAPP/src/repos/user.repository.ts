@@ -10,6 +10,9 @@ export class UserRepository {
 
     }
 
+    /**
+     * Promise used to get the user data from the local JSON file 'user-json', the user is then given as result of the promise
+     */
     getUserData(): Promise<any> {
         return new Promise<any>(
             (resolve) => {
@@ -22,10 +25,16 @@ export class UserRepository {
         )
     }
 
+    /**
+     * Method used to save a new user in the user-json data file
+     */
     setUserData() {
         this.storage.set('user-json', this.createNewUser());
     }
 
+    /**
+     * Method used to create a new user with the default User constructor
+     */
     createNewUser() {
         let user = new User();
         return user;

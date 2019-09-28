@@ -22,6 +22,9 @@ export class BooksPage {
   private noBooksText = this.uiMessages.booksPageMessages.noBooksMessage;
   private category: string;
 
+  /**
+   * At the page event CanEnter all the books data array of the user are collected in a variable
+   */
   ionViewCanEnter() {
     this.userBooksData = this.userService.getUser().books;
     this.category = "to-read";

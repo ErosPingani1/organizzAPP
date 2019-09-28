@@ -4,6 +4,7 @@
     <sub class="welcome-sub-books">{{ subtitle }}</sub>
     <ion-icon *ngIf="userBooksData.length > 0" name="search" class="search-icon"></ion-icon>
   </div>
+  <!-- div show only in the case user has no books registered -->
   <div *ngIf="userBooksData.length == 0" class="icon-container">
     <img src="../../assets/icon/book.png" alt="Nonhainessunlibro" class="no-books-icon">
     <p class="no-books-text">{{ noBooksText }}</p>

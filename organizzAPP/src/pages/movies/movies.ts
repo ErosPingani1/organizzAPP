@@ -21,6 +21,9 @@ export class MoviesPage {
   private subtitle = this.uiMessages.moviesPageMessages.subtitle;
   private category: string;
 
+  /**
+   * At the page event CanEnter all the movies data array of the user are collected in a variable
+   */
   ionViewCanEnter() {
     this.userMoviesData = this.userService.getUser().movies;
     this.category = "to-watch";

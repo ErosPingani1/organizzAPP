@@ -21,6 +21,9 @@ export class MusicPage {
   private subtitle = this.uiMessages.musicPageMessages.subtitle;
   private category: string;
 
+  /**
+   * At the page event CanEnter all the movies data array of the user are collected in a variable
+   */
   ionViewCanEnter() {
     this.userMusicData = this.userService.getUser().music;
     this.category = "to-listen";

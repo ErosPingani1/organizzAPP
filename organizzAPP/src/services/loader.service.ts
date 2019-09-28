@@ -12,6 +12,10 @@ export class LoaderService {
 
     loading: any;
 
+    /**
+     * Metod used to show the custom loader as required in the application.
+     * The content is radnomly taken from the constant file ui-messages
+     */
     presentLoading() {
         let loaderSpinner = 'dots';
         let contentArray = this.uiMessages.homePageMessages.loaderMessages;
@@ -24,6 +28,9 @@ export class LoaderService {
         this.loading.present();
     }
 
+    /**
+     * Method called to close the loader
+     */
     closeLoading() {
         this.loading.dismiss();
     }

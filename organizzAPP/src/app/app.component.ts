@@ -13,6 +13,10 @@ export class MyApp {
   rootPage:any = TabsPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, userService: UserService) {
+    /**
+     * When the platform is ready before everything else some settings are managed (statusBar style), the splashscreen is hidden and the method checkUserExists()
+     * of the userService is called in order to load user data or create new local data
+     */
     platform.ready().then(() => {
       statusBar.styleLightContent();
       splashScreen.hide();

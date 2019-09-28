@@ -12,6 +12,11 @@ export class UserService {
 
     private user: User;
 
+    /**
+     * Method used to check whether the user exits or not in the app storage.
+     * The method getUserData() of the userRepository is called, when it gives a response if the user is null a new user is created, otherwise 
+     * the new session user is setted as the user currently saved in the storage
+     */
     checkUserExists() {
         this.userRepo.getUserData().then(
             (user) => {
@@ -26,6 +31,9 @@ export class UserService {
         );
     }
 
+    /**
+     * Method used to retreive the active user
+     */
     getUser() {
         return this.user;
     }
