@@ -1,0 +1,7 @@
+{
+  "name": "organizzAPP",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

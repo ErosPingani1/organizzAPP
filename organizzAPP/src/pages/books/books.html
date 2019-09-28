@@ -1,0 +1,19 @@
+<ion-content padding class="page-content">
+  <div class="title-container">
+    <h1 class="welcome-text">{{ welcomeText }}</h1>
+    <sub class="welcome-sub-books">{{ subtitle }}</sub>
+    <ion-icon *ngIf="userBooksData.length > 0" name="search" class="search-icon"></ion-icon>
+  </div>
+  <div *ngIf="userBooksData.length == 0" class="icon-container">
+    <img src="../../assets/icon/book.png" alt="Nonhainessunlibro" class="no-books-icon">
+    <p class="no-books-text">{{ noBooksText }}</p>
+  </div>
+  <ion-segment mode="md" class="selection-container" [(ngModel)]="category" *ngIf="userBooksData.length > 0">
+    <ion-segment-button text-capitalize value="to-read">
+      Da Leggere
+    </ion-segment-button>
+    <ion-segment-button text-capitalize value="completed">
+      Completati
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>

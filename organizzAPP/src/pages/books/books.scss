@@ -1,0 +1,19 @@
+.welcome-sub-books {
+    display: inline-block;
+    margin-top: 3.5em;
+    margin-left: -8.25em;
+}
+
+.icon-container {
+    text-align: center;
+}
+
+.no-books-icon {
+    color: color($colors, primary);
+    width: 7em;
+}
+
+.no-books-text {
+    font-weight: bold;
+    color: color($colors, primary);
+}

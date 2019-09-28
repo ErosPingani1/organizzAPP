@@ -1,0 +1,24 @@
+pagine utili:
+
+- home (varie info con recenti e altro)
+- libri (inserisci libri che vuoi leggere e flagga quelli letti) API?
+- musica (inserisci musiche che ti hanno consigliato e flagga quelle sentite) SPORIFY API / CATALOGO MUSICALE FREE?
+- film (inserisci i film che ti hanno consigliato e flagga quelli visti) CATALOGO MUSICALE FREE / IMDB API?
+- altro (gestisci una serie di categorie custom e gestisci vari eventi)
+
+NELLE PAGINE LA LENTE COMPARE SOLO LADDOVE CI SIANO DEGLI ELEMENTI DI TALE CATEGORIA, ALTRIMENTI C'E' UN PULSANTE DI AGGIUNTA
+
+I FILE VENGONO SALVATI IN UN JSON CON UNA DETERMINATA STRUTTURA:
+
+user -->
+	books --> dati libri
+	music --> dati musica
+	movies --> dati film
+	other --> dati belli
+IL TUTTO PUO' ESSERE CRIPTATO PRIMA DI ESSERE SALVATO E DECRITTATO IN FASE DI APERTURA DELL'APP
+
+All'apertura delle pagine vengono richiamati servizi appositi per ottenere i dati interessati, tipo copertina e altro.
+
+All'apertura viene controllato se sullo storage è già presente un elemento user, se no questo viene creato, altrimenti viene effettuata la get.
+
+LA PAGINA DI ROOT VIENE CARICATA PRIMA DELLA FINE DEL PLATFORM READY

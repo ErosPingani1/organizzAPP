@@ -1,0 +1,7 @@
+<ion-tabs no-border>
+    <ion-tab (ionSelect)="setPageName('home')" [root]="homePage" [tabTitle]="homePageName" tabIcon="home"></ion-tab> 
+    <ion-tab (ionSelect)="setPageName('books')" [root]="booksPage" [tabTitle]="booksPageName" tabIcon="book"></ion-tab>
+    <ion-tab (ionSelect)="setPageName('music')" [root]="musicPage" [tabTitle]="musicPageName" tabIcon="musical-note"></ion-tab>
+    <ion-tab (ionSelect)="setPageName('movies')" [root]="moviesPage" [tabTitle]="moviesPageName" tabIcon="film"></ion-tab>
+    <ion-tab (ionSelect)="setPageName('other')" [root]="otherPage" [tabTitle]="otherPageName" tabIcon="infinite"></ion-tab>
+</ion-tabs>
