@@ -2,12 +2,12 @@ import { Injectable } from "@angular/core";
 
 @Injectable()
 
-export class uiMessages {
+export class uiIT {
 
     public homePageMessages = { 
         pageName: 'Home',
+        welcomeText: 'Bentornato',
         subtitle: "Organizza la tua vita, vivi più sereno!",
-        loaderMessages: ['Pettinando le bambole', 'Mangiando una banana', 'Caricamento infinito', 'Aspettando il tramonto']
     }
 
     public booksPageMessages = {
@@ -33,6 +33,10 @@ export class uiMessages {
         pageName: 'Altro',
         welcomeText: 'Altro',
         subtitle: "Gestisci tutti i tuoi interessi più profondi!"
+    }
+
+    public appLoaderMessages = {
+        loaderMessages: ['Pettinando le bambole', 'Mangiando una banana', 'Caricamento infinito', 'Aspettando il tramonto']
     }
 
 }

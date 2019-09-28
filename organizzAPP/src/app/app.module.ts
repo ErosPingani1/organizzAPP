@@ -11,11 +11,13 @@ import { BooksPage } from '../pages/books/books';
 import { MusicPage } from '../pages/music/music';
 import { MoviesPage } from '../pages/movies/movies';
 import { OtherPage } from '../pages/other/other';
-import { uiMessages } from '../constants/ui-messages';
+import { uiIT } from '../constants/it/ui_it';
+import { uiEN} from '../constants/en/ui_en';
 import { UserService } from '../services/user.service';
 import { UserRepository } from '../repos/user.repository';
 import { IonicStorageModule } from '@ionic/storage';
 import { LoaderService } from '../services/loader.service';
+import { LanguageService } from '../services/language.service';
 
 @NgModule({
   declarations: [
@@ -45,10 +47,12 @@ import { LoaderService } from '../services/loader.service';
   providers: [
     StatusBar,
     SplashScreen,
-    uiMessages,
+    uiIT,
+    uiEN,
     UserService,
     UserRepository,
     LoaderService,
+    LanguageService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
