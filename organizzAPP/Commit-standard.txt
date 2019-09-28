@@ -1,0 +1,10 @@
+--Standards to follow when committing in order to keep project history clear--
+
+New Functionality:
+[OrganizzApp][Development][Functionality] - Added new functionality (functionalityname)
+
+New Defect Resolution:
+[OrganizzApp][FIX][Defectnumber] - Fix defect number... 
+
+New Project Management Setting Added (JavaDocs - Doc files):
+[OrganizzApp][Management][(Docs / File)] - Added (Typeofdocument)
