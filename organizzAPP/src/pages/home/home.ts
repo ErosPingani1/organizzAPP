@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, Platform } from 'ionic-angular';
 import { UserService } from '../../services/user.service';
 import { LoaderService } from '../../services/loader.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'page-home',
@@ -20,9 +21,13 @@ export class HomePage {
    * @param loaderService 
    */
   constructor(public navCtrl: NavController, public userService: UserService, public platform: Platform,
-    public loaderService: LoaderService) {
+    public loaderService: LoaderService, public languageService: LanguageService) {
     this.loaderService.presentLoading();
   }
+
+  private pageName = "";
+  private welcomeText = this.languageService.getUI().homePageMessages.welcomeText;
+  private subtitle = this.languageService.getUI().homePageMessages.subtitle;
 
   /**
    * At the event CanEnter of the hompage the username of the active user is setted as username value and the loader is closed.

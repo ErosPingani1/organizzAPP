@@ -1,7 +1,7 @@
 <ion-content padding class="page-content">
   <div class="title-container" *ngIf="loadedData">
-    <h1 class="welcome-text-home">Bentornato {{ username }}</h1>
-    <sub class="welcome-sub-home">Organizza la tua vita, vivi più sereno!</sub>
+    <h1 class="welcome-text-home">{{ welcomeText }} {{ username }}</h1>
+    <sub class="welcome-sub-home">{{ subtitle }}</sub>
     <ion-icon name="more" class="more-icon"></ion-icon>
   </div>
 </ion-content>
