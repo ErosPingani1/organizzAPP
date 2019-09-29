@@ -1,8 +1,6 @@
 <ion-content padding class="page-content">
     <div class="title-container">
-        <h1 class="welcome-text">{{ welcomeText }}</h1>
-        <sub class="welcome-sub-music">{{ subtitle }}</sub>
-        <ion-icon *ngIf="userMusicData.length > 0" name="search" class="search-icon"></ion-icon>
+      <header [title]="welcomeText" [subtitle]="subtitle" [page]="pageName" [loadedObjects]="userMusicData.length"></header>
     </div>
     <ion-segment mode="md" class="selection-container" [(ngModel)]="category">
         <ion-segment-button text-capitalize value="to-listen">

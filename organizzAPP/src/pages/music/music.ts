@@ -10,16 +10,15 @@ import { LanguageService } from '../../services/language.service';
 })
 export class MusicPage {
 
-  userMusicData: Music[];
+  private userMusicData: Music[];
+  private pageName = this.languageService.getUI().musicPageMessages.pageName;
+  private welcomeText = this.languageService.getUI().musicPageMessages.welcomeText;
+  private subtitle = this.languageService.getUI().musicPageMessages.subtitle;
+  private category: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,
     public userService: UserService) {
   }
-
-  private pageName = "";
-  private welcomeText = this.languageService.getUI().musicPageMessages.welcomeText;
-  private subtitle = this.languageService.getUI().musicPageMessages.subtitle;
-  private category: string;
 
   /**
    * At the page event CanEnter all the movies data array of the user are collected in a variable

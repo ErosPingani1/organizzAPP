@@ -1,8 +1,6 @@
 <ion-content padding class="page-content">
     <div class="title-container">
-        <h1 class="welcome-text">{{ welcomeText }}</h1>
-        <sub class="welcome-sub-movies">{{ subtitle }}</sub>
-        <ion-icon *ngIf="userMoviesData.length > 0" name="search" class="search-icon"></ion-icon>
+        <header [title]="welcomeText" [subtitle]="subtitle" [page]="pageName" [loadedObjects]="userMoviesData.length"></header>
     </div>
     <ion-segment mode="md" class="selection-container" [(ngModel)]="category">
         <ion-segment-button text-capitalize value="to-watch">

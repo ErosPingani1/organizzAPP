@@ -10,16 +10,15 @@ import { LanguageService } from '../../services/language.service';
 })
 export class MoviesPage {
 
-  userMoviesData: Movie[];
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,
-    public userService: UserService) {
-  }
-
+  private userMoviesData: Movie[];
   private pageName = this.languageService.getUI().moviesPageMessages.pageName;
   private welcomeText = this.languageService.getUI().moviesPageMessages.welcomeText;
   private subtitle = this.languageService.getUI().moviesPageMessages.subtitle;
   private category: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,
+    public userService: UserService) {
+  }
 
   /**
    * At the page event CanEnter all the movies data array of the user are collected in a variable

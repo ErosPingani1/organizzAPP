@@ -10,17 +10,16 @@ import { LanguageService } from '../../services/language.service';
 })
 export class BooksPage {
 
-  userBooksData: Book[];
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,
-    public userService: UserService) {
-  }
-
-  private pageName = "";
+  private userBooksData: Book[];
+  private pageName = this.languageService.getUI().booksPageMessages.pageName;
   private welcomeText = this.languageService.getUI().booksPageMessages.welcomeText;
   private subtitle = this.languageService.getUI().booksPageMessages.subtitle;
   private noBooksText = this.languageService.getUI().booksPageMessages.noBooksMessage;
   private category: string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,
+    public userService: UserService) {
+  }
 
   /**
    * At the page event CanEnter all the books data array of the user are collected in a variable
