@@ -18,6 +18,7 @@ import { UserRepository } from '../repos/user.repository';
 import { IonicStorageModule } from '@ionic/storage';
 import { LoaderService } from '../services/loader.service';
 import { LanguageService } from '../services/language.service';
+import { HeaderComponent } from '../components/header/header';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { LanguageService } from '../services/language.service';
     BooksPage,
     MusicPage,
     MoviesPage,
-    OtherPage
+    OtherPage,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { LanguageService } from '../services/language.service';
     BooksPage,
     MusicPage,
     MoviesPage,
-    OtherPage
+    OtherPage,
+    HeaderComponent
   ],
   providers: [
     StatusBar,

@@ -96,11 +96,15 @@ $tabs-ios-border: none;
   font-family: Asap, sans-serif;
 }
 
-.welcome-text {
+.title {
   float: left;
   color: color($colors, primary);
   width: fit-content;
   margin: 0;
+}
+
+.subtitle {
+  display: inline-block;
 }
 
 .more-icon {

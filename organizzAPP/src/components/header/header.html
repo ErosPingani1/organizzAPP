@@ -1,0 +1,4 @@
+<h1 class="title">{{ title }}</h1>
+<sub class="subtitle">{{ subtitle }}</sub>
+<ion-icon *ngIf="page === 'home'" name="more" class="more-icon"></ion-icon>
+<ion-icon *ngIf="page != 'home' && loadedObjects > 0" name="search" class="search-icon"></ion-icon>
