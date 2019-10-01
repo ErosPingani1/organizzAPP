@@ -14,19 +14,25 @@ export class uiIT {
         pageName: "Libreria",
         welcomeText: "Libreria",
         subtitle: "Gestisci la tua lista di libri da leggere",
-        noBooksMessage: "E' tempo di leggere! Nessun libro nella tua libreria"
+        noBooksMessage: "E' tempo di leggere! Nessun libro nella tua libreria",
+        toReadSegment: "Da leggere",
+        riddenSegment: "Letti"
     }
 
     public musicPageMessages = {
         pageName: "Musica",
         welcomeText: "Musica",
-        subtitle: "Scopri ed ascolta nuovi brani musicali"
+        subtitle: "Scopri ed ascolta nuovi brani musicali",
+        toListenSegment: "Da ascoltare",
+        listenedSegment: "Ascoltata"
     }
 
     public moviesPageMessages = {
         pageName: "Videoteca",
         welcomeText: "Videoteca",
-        subtitle: "Immergiti in nuovi film e serie TV"
+        subtitle: "Immergiti in nuovi film e serie TV",
+        toWatchSegment: "Da guardare",
+        watchedSegment: "Guardati"
     }
 
     public otherPageMessages = {
@@ -36,7 +42,7 @@ export class uiIT {
     }
 
     public appLoaderMessages = {
-        loaderMessages: ['Pettinando le bambole', 'Mangiando una banana', 'Caricamento infinito', 'Aspettando il tramonto']
+        loaderMessages: ['Pettinando le bambole', 'Mangiando una banana', 'Caricamento infinito', 'Aspettando il tramonto', 'Facendo andare le mani']
     }
 
 }

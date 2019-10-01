@@ -14,19 +14,25 @@ export class uiEN {
         pageName: "Library",
         welcomeText: "Library",
         subtitle: "Manage your to-read list",
-        noBooksMessage: "It's time to read! No books in your library"
+        noBooksMessage: "It's time to read! No books in your library",
+        toReadSegment: "To read",
+        riddenSegment: "Finished"
     }
 
     public musicPageMessages = {
         pageName: "Music",
         welcomeText: "Music",
-        subtitle: "Discover and listen new songs"
+        subtitle: "Discover and listen new songs",
+        toListenSegment: "To listen",
+        listenedSegment: "Listened"
     }
 
     public moviesPageMessages = {
         pageName: "Movies",
         welcomeText: "Movies",
-        subtitle: "Dive into new movies and TV series"
+        subtitle: "Dive into new movies and TV series",
+        toWatchSegment: "To watch",
+        watchedSegment: "Watched"
     }
 
     public otherPageMessages = {
@@ -36,7 +42,7 @@ export class uiEN {
     }
 
     public appLoaderMessages = {
-        loaderMessages: ['Combing the dolls', 'Eating a banana', 'Infinite loading', 'Waiting for sunset']
+        loaderMessages: ['Combing the dolls', 'Eating a banana', 'Infinite loading', 'Waiting for sunset', 'Letting hands go']
     }
 
 }
