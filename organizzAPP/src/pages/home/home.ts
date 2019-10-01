@@ -12,9 +12,7 @@ export class HomePage {
 
   private username: string = "";
   private loadedData: boolean = false;
-  private pageName = "home";
-  private welcomeText = "";
-  private subtitle = "";
+  private homePageMessages: any;
 
   /**
    * HomePage contstuctor, in the progress of page buildup the declared loaderService is used to present the loader
@@ -34,9 +32,8 @@ export class HomePage {
    */
   ionViewCanEnter() {
     setTimeout(() => {
+      this.homePageMessages = this.languageService.getUI().homePageMessages;
       this.username = this.userService.getUser().username;
-      this.welcomeText = this.languageService.getUI().homePageMessages.welcomeText + ' ' + this.username;
-      this.subtitle = this.languageService.getUI().homePageMessages.subtitle;
       this.loaderService.closeLoading();
       this.loadedData = true;
     }, 1000);
