@@ -11,9 +11,7 @@ import { LanguageService } from '../../services/language.service';
 export class MusicPage {
 
   private userMusicData: Music[];
-  private pageName = this.languageService.getUI().musicPageMessages.pageName;
-  private welcomeText = this.languageService.getUI().musicPageMessages.welcomeText;
-  private subtitle = this.languageService.getUI().musicPageMessages.subtitle;
+  private musicPageMessages = this.languageService.getUI().musicPageMessages;
   private category: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,

@@ -1,18 +1,18 @@
 <ion-content padding class="page-content">
   <div class="title-container">
-    <header [title]="welcomeText" [subtitle]="subtitle" [page]="pageName" [loadedObjects]="userBooksData.length"></header>
+    <header [title]="booksPageMessages.welcomeText" [subtitle]="booksPageMessages.subtitle" [page]="booksPageMessages.pageName" [loadedObjects]="userBooksData.length"></header>
   </div>
   <!-- div show only in the case user has no books registered -->
   <div *ngIf="userBooksData.length == 0" class="icon-container">
     <img src="../../assets/icon/book.png" alt="Nonhainessunlibro" class="no-books-icon">
-    <p class="no-books-text">{{ noBooksText }}</p>
+    <p class="no-books-text">{{ booksPageMessages.noBooksMessage }}</p>
   </div>
   <ion-segment mode="md" class="selection-container" [(ngModel)]="category" *ngIf="userBooksData.length > 0">
     <ion-segment-button text-capitalize value="to-read">
-      Da Leggere
+      {{ booksPageMessages.toReadSegment }}
     </ion-segment-button>
     <ion-segment-button text-capitalize value="completed">
-      Completati
+      {{ booksPageMessages.riddenSegment }}
     </ion-segment-button>
   </ion-segment>
 </ion-content>

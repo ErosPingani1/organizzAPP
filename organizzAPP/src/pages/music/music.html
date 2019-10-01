@@ -1,13 +1,13 @@
 <ion-content padding class="page-content">
     <div class="title-container">
-      <header [title]="welcomeText" [subtitle]="subtitle" [page]="pageName" [loadedObjects]="userMusicData.length"></header>
+      <header [title]="musicPageMessages.welcomeText" [subtitle]="musicPageMessages.subtitle" [page]="musicPageMessages.pageName" [loadedObjects]="userMusicData.length"></header>
     </div>
     <ion-segment mode="md" class="selection-container" [(ngModel)]="category">
         <ion-segment-button text-capitalize value="to-listen">
-          Da Ascoltare
+          {{ musicPageMessages.toListenSegment }}
         </ion-segment-button>
         <ion-segment-button text-capitalize value="listened">
-          Ascoltati
+          {{ musicPageMessages.listenedSegment }}
         </ion-segment-button>
       </ion-segment>
 </ion-content>

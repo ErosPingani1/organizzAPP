@@ -11,6 +11,7 @@ import { LanguageService } from '../../services/language.service';
 export class MoviesPage {
 
   private userMoviesData: Movie[];
+  private moviesPageMessages = this.languageService.getUI().moviesPageMessages;
   private pageName = this.languageService.getUI().moviesPageMessages.pageName;
   private welcomeText = this.languageService.getUI().moviesPageMessages.welcomeText;
   private subtitle = this.languageService.getUI().moviesPageMessages.subtitle;

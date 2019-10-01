@@ -11,10 +11,7 @@ import { LanguageService } from '../../services/language.service';
 export class BooksPage {
 
   private userBooksData: Book[];
-  private pageName = this.languageService.getUI().booksPageMessages.pageName;
-  private welcomeText = this.languageService.getUI().booksPageMessages.welcomeText;
-  private subtitle = this.languageService.getUI().booksPageMessages.subtitle;
-  private noBooksText = this.languageService.getUI().booksPageMessages.noBooksMessage;
+  private booksPageMessages = this.languageService.getUI().booksPageMessages;
   private category: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,

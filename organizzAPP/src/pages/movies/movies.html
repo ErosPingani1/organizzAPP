@@ -1,13 +1,13 @@
 <ion-content padding class="page-content">
     <div class="title-container">
-        <header [title]="welcomeText" [subtitle]="subtitle" [page]="pageName" [loadedObjects]="userMoviesData.length"></header>
+        <header [title]="moviesPageMessages.welcomeText" [subtitle]="moviesPageMessages.subtitle" [page]="moviesPageMessages.pageName" [loadedObjects]="userMoviesData.length"></header>
     </div>
     <ion-segment mode="md" class="selection-container" [(ngModel)]="category">
         <ion-segment-button text-capitalize value="to-watch">
-            Da Guardare
+            {{ moviesPageMessages.toWatchSegment }}
         </ion-segment-button>
         <ion-segment-button text-capitalize value="watched">
-            Guardati
+            {{ moviesPageMessages.watchedSegment }}
         </ion-segment-button>
     </ion-segment>
 </ion-content>
