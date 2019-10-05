@@ -4,13 +4,13 @@ import { Injectable } from "@angular/core";
 
 export class uiEN {
 
-    public homePageMessages = { 
+    public homePageUi = { 
         pageName: 'Home',
         welcomeText: 'Welcome back',
         subtitle: "Organize you life, live easier!",
     }
 
-    public booksPageMessages = {
+    public booksPageUi = {
         pageName: "Library",
         welcomeText: "Library",
         subtitle: "Manage your to-read list",
@@ -19,7 +19,7 @@ export class uiEN {
         riddenSegment: "Finished"
     }
 
-    public musicPageMessages = {
+    public musicPageUi = {
         pageName: "Music",
         welcomeText: "Music",
         subtitle: "Discover and listen new songs",
@@ -27,7 +27,7 @@ export class uiEN {
         listenedSegment: "Listened"
     }
 
-    public moviesPageMessages = {
+    public moviesPageUi = {
         pageName: "Movies",
         welcomeText: "Movies",
         subtitle: "Dive into new movies and TV series",
@@ -35,7 +35,7 @@ export class uiEN {
         watchedSegment: "Watched"
     }
 
-    public otherPageMessages = {
+    public otherPageUi = {
         pageName: 'Other',
         welcomeText: 'Other',
         subtitle: "Manage all your deepest interests"

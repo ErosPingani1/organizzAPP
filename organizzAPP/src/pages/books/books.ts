@@ -11,7 +11,7 @@ import { LanguageService } from '../../services/language.service';
 export class BooksPage {
 
   private userBooksData: Book[];
-  private booksPageMessages = this.languageService.getUI().booksPageMessages;
+  private booksPageUi = this.languageService.getUI().booksPageUi;
   private category: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public languageService: LanguageService,
@@ -24,9 +24,6 @@ export class BooksPage {
   ionViewCanEnter() {
     this.userBooksData = this.userService.getUser().books;
     this.category = "to-read";
-  }
-
-  ionViewDidLoad() {
   }
 
 }

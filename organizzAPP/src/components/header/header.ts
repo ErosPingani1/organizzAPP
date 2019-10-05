@@ -10,14 +10,10 @@ export class HeaderComponent {
 
   /**
    * Input values used to populate the elements of the custom component
-   * title: title of the page where the header must be loaded
-   * subtitle: subtitle of the page where the header must be loaded  
-   * page: name of the page where the header must be loaded
-   * loadedObjects: number of objects loaded into the page
+   * pageUi: Ui elements of the page used to populate the header custom element depending of the page using it
+   * loadedObjects: Number of objects loaded in the page array, in order to show a different action icon onthe page depending on the necessity
    */
-  @Input() title: string;
-  @Input() subtitle: string;
-  @Input() page: string;
+  @Input() pageUi: any;
   @Input() loadedObjects: number;
 
   constructor() {

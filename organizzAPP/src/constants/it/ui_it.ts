@@ -4,13 +4,13 @@ import { Injectable } from "@angular/core";
 
 export class uiIT {
 
-    public homePageMessages = { 
+    public homePageUi = { 
         pageName: 'Home',
         welcomeText: 'Bentornato',
         subtitle: "Organizza la tua vita, vivi più sereno!",
     }
 
-    public booksPageMessages = {
+    public booksPageUi = {
         pageName: "Libreria",
         welcomeText: "Libreria",
         subtitle: "Gestisci la tua lista di libri da leggere",
@@ -19,7 +19,7 @@ export class uiIT {
         riddenSegment: "Letti"
     }
 
-    public musicPageMessages = {
+    public musicPageUi = {
         pageName: "Musica",
         welcomeText: "Musica",
         subtitle: "Scopri ed ascolta nuovi brani musicali",
@@ -27,7 +27,7 @@ export class uiIT {
         listenedSegment: "Ascoltata"
     }
 
-    public moviesPageMessages = {
+    public moviesPageUi = {
         pageName: "Videoteca",
         welcomeText: "Videoteca",
         subtitle: "Immergiti in nuovi film e serie TV",
@@ -35,7 +35,7 @@ export class uiIT {
         watchedSegment: "Guardati"
     }
 
-    public otherPageMessages = {
+    public otherPageUi = {
         pageName: 'Altro',
         welcomeText: 'Altro',
         subtitle: "Gestisci tutti i tuoi interessi più profondi!"

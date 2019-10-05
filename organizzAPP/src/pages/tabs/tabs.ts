@@ -37,19 +37,19 @@ export class TabsPage {
     this.clearAllPageNames();
     switch(page) {
       case 'home':
-        this.homePageName = this.languageService.getUI().homePageMessages.pageName;
+        this.homePageName = this.languageService.getUI().homePageUi.pageName;
         break;
       case 'books':
-        this.booksPageName = this.languageService.getUI().booksPageMessages.pageName;
+        this.booksPageName = this.languageService.getUI().booksPageUi.pageName;
         break;
       case 'music':
-        this.musicPageName = this.languageService.getUI().musicPageMessages.pageName;
+        this.musicPageName = this.languageService.getUI().musicPageUi.pageName;
         break;
       case 'movies':
-        this.moviesPageName = this.languageService.getUI().moviesPageMessages.pageName;
+        this.moviesPageName = this.languageService.getUI().moviesPageUi.pageName;
         break;
       case 'other':
-        this.otherPageName = this.languageService.getUI().otherPageMessages.pageName;
+        this.otherPageName = this.languageService.getUI().otherPageUi.pageName;
         break;
     }
   }
