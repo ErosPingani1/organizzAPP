@@ -3,8 +3,8 @@
     <header [pageUi]="booksPageUi" [loadedObjects]="userBooksData.length"></header>
   </div>
   <!-- div show only in the case user has no books registered -->
-  <div *ngIf="userBooksData.length == 0" class="icon-container">
-    <img src="../../assets/icon/book.png" alt="Nonhainessunlibro" class="no-books-icon">
+  <div *ngIf="userBooksData.length == 0" class="noelements-icon-container">
+    <img src="../../assets/icon/book.png" alt="Nobooksicon" class="no-books-icon">
     <p class="no-books-text">{{ booksPageUi.noBooksMessage }}</p>
   </div>
   <ion-segment mode="md" class="selection-container" [(ngModel)]="category" *ngIf="userBooksData.length > 0">

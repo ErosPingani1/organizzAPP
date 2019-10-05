@@ -126,3 +126,12 @@ $tabs-ios-border: none;
   margin-top: 2.5em;
   font-weight: bold;
 }
+
+.noelements-icon-container {
+  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
