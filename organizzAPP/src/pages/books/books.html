@@ -4,8 +4,7 @@
   </div>
   <!-- div show only in the case user has no books registered -->
   <div *ngIf="userBooksData.length == 0" class="noelements-icon-container">
-    <img src="../../assets/icon/book.png" alt="Nobooksicon" class="no-books-icon">
-    <p class="no-books-text">{{ booksPageUi.noBooksMessage }}</p>
+    <no-loaded-elements [pageUi]="booksPageUi"></no-loaded-elements>
   </div>
   <ion-segment mode="md" class="selection-container" [(ngModel)]="category" *ngIf="userBooksData.length > 0">
     <ion-segment-button text-capitalize value="to-read">

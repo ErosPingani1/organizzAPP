@@ -18,7 +18,8 @@ import { UserRepository } from '../repos/user.repository';
 import { IonicStorageModule } from '@ionic/storage';
 import { LoaderService } from '../services/loader.service';
 import { LanguageService } from '../services/language.service';
-import { HeaderComponent } from '../components/header/header';
+import { HeaderComponent } from '../components/header/header.component';
+import { NoLoadedElementsComponent } from '../components/no-loaded-elements/no-loaded-elements.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HeaderComponent } from '../components/header/header';
     MusicPage,
     MoviesPage,
     OtherPage,
-    HeaderComponent
+    HeaderComponent,
+    NoLoadedElementsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +47,8 @@ import { HeaderComponent } from '../components/header/header';
     MusicPage,
     MoviesPage,
     OtherPage,
-    HeaderComponent
+    HeaderComponent,
+    NoLoadedElementsComponent
   ],
   providers: [
     StatusBar,

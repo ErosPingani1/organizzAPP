@@ -135,3 +135,13 @@ $tabs-ios-border: none;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.no-elements-icon {
+  color: color($colors, primary);
+  width: 7em;
+}
+
+.no-elements-text {
+  font-weight: bold;
+  color: color($colors, primary);
+}

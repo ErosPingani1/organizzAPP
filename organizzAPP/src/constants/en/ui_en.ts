@@ -23,6 +23,7 @@ export class uiEN {
         pageName: "Music",
         welcomeText: "Music",
         subtitle: "Discover and listen new songs",
+        noMusicMessage: "Let the music drive you! Add new songs to you library",
         toListenSegment: "To listen",
         listenedSegment: "Listened"
     }
@@ -31,6 +32,7 @@ export class uiEN {
         pageName: "Movies",
         welcomeText: "Movies",
         subtitle: "Dive into new movies and TV series",
+        noMoviesMessage: "Forget your social life! Add new movies and TV series",
         toWatchSegment: "To watch",
         watchedSegment: "Watched"
     }

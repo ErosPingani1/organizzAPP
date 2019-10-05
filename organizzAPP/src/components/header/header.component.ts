@@ -4,7 +4,7 @@ import { Component, Injectable, Input } from '@angular/core';
 
 @Component({
   selector: 'header',
-  templateUrl: 'header.html'
+  templateUrl: 'header.component.html'
 })
 export class HeaderComponent {
 

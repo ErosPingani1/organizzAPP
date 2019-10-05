@@ -2,7 +2,11 @@
     <div class="title-container">
         <header [pageUi]="moviesPageUi" [loadedObjects]="userMoviesData.length"></header>
     </div>
-    <ion-segment mode="md" class="selection-container" [(ngModel)]="category">
+    <!-- div show only in the case user has no books registered -->
+    <div *ngIf="userMoviesData.length == 0" class="noelements-icon-container">
+        <no-loaded-elements [pageUi]="moviesPageUi"></no-loaded-elements>
+    </div>
+    <ion-segment mode="md" class="selection-container" [(ngModel)]="category" *ngIf="userMoviesData.length > 0">
         <ion-segment-button text-capitalize value="to-watch">
             {{ moviesPageUi.toWatchSegment }}
         </ion-segment-button>

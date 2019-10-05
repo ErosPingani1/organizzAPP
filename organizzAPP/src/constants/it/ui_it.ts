@@ -11,32 +11,34 @@ export class uiIT {
     }
 
     public booksPageUi = {
-        pageName: "Libreria",
+        pageName: "Library",
         welcomeText: "Libreria",
         subtitle: "Gestisci la tua lista di libri da leggere",
-        noBooksMessage: "E' tempo di leggere! Nessun libro nella tua libreria",
+        noBooksMessage: "È tempo di leggere! Nessun libro nella tua libreria",
         toReadSegment: "Da leggere",
         riddenSegment: "Letti"
     }
 
     public musicPageUi = {
-        pageName: "Musica",
+        pageName: "Music",
         welcomeText: "Musica",
         subtitle: "Scopri ed ascolta nuovi brani musicali",
+        noMusicMessage: "Lascia che la musica ti guidi! Aggiungi nuove canzoni alla tua libreria",
         toListenSegment: "Da ascoltare",
         listenedSegment: "Ascoltata"
     }
 
     public moviesPageUi = {
-        pageName: "Videoteca",
+        pageName: "Movies",
         welcomeText: "Videoteca",
         subtitle: "Immergiti in nuovi film e serie TV",
+        noMoviesMessage: "Dimenticati della tua vita sociale! Aggiungi nuovi film e serie TV",
         toWatchSegment: "Da guardare",
         watchedSegment: "Guardati"
     }
 
     public otherPageUi = {
-        pageName: 'Altro',
+        pageName: 'Other',
         welcomeText: 'Altro',
         subtitle: "Gestisci tutti i tuoi interessi più profondi!"
     }

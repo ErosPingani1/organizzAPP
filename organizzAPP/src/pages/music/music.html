@@ -1,13 +1,17 @@
 <ion-content padding class="page-content">
-    <div class="title-container">
-      <header [pageUi]="musicPageUi" [loadedObjects]="userMusicData.length"></header>
-    </div>
-    <ion-segment mode="md" class="selection-container" [(ngModel)]="category">
-        <ion-segment-button text-capitalize value="to-listen">
-          {{ musicPageUi.toListenSegment }}
-        </ion-segment-button>
-        <ion-segment-button text-capitalize value="listened">
-          {{ musicPageUi.listenedSegment }}
-        </ion-segment-button>
-      </ion-segment>
+  <div class="title-container">
+    <header [pageUi]="musicPageUi" [loadedObjects]="userMusicData.length"></header>
+  </div>
+  <!-- div show only in the case user has no books registered -->
+  <div *ngIf="userMusicData.length == 0" class="noelements-icon-container">
+    <no-loaded-elements [pageUi]="musicPageUi"></no-loaded-elements>
+  </div>
+  <ion-segment mode="md" class="selection-container" [(ngModel)]="category" *ngIf="userMusicData.length > 0">
+    <ion-segment-button text-capitalize value="to-listen">
+      {{ musicPageUi.toListenSegment }}
+    </ion-segment-button>
+    <ion-segment-button text-capitalize value="listened">
+      {{ musicPageUi.listenedSegment }}
+    </ion-segment-button>
+  </ion-segment>
 </ion-content>
