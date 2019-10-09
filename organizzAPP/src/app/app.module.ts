@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule, ErrorHandler, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
@@ -20,6 +20,7 @@ import { LoaderService } from '../services/loader.service';
 import { LanguageService } from '../services/language.service';
 import { HeaderComponent } from '../components/header/header.component';
 import { NoLoadedElementsComponent } from '../components/no-loaded-elements/no-loaded-elements.component';
+import { NoElementsFabComponent } from '../components/no-elements-fab/no-elements-fab.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NoLoadedElementsComponent } from '../components/no-loaded-elements/no-l
     MoviesPage,
     OtherPage,
     HeaderComponent,
-    NoLoadedElementsComponent
+    NoLoadedElementsComponent,
+    NoElementsFabComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { NoLoadedElementsComponent } from '../components/no-loaded-elements/no-l
     MoviesPage,
     OtherPage,
     HeaderComponent,
-    NoLoadedElementsComponent
+    NoLoadedElementsComponent,
+    NoElementsFabComponent
   ],
   providers: [
     StatusBar,
@@ -60,6 +63,7 @@ import { NoLoadedElementsComponent } from '../components/no-loaded-elements/no-l
     LoaderService,
     LanguageService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
-  ]
+  ],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
